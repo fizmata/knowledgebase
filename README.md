@@ -1,2 +1,2 @@
 # knowledgebase
-cheat-sheet for everything that I know
+Repostory houses neat tricks that I find useful and things that make my life as tech professional easier

@@ -18,6 +18,10 @@ echo
 mkdir -p group_vars
 touch group_vars/all.yml
 touch hosts
+mkdir -p roles/ping/tasks
+touch roles/ping/tasks/main.yml
+mkdir -p playbooks
+touch playbooks/ping.yml
 
 # Create the Ansible configuration file
 cat << EOF > ansible.cfg
@@ -31,6 +35,23 @@ echo "$vault_password" > vault_password.txt
 
 # Add the vault password file to .gitignore
 echo "vault_password.txt" >> .gitignore
+
+# Create a role named ping that uses the ping module
+cat << EOF > roles/ping/tasks/main.yml
+---
+- name: Ping the remote hosts
+  ping:
+EOF
+
+# Create a playbook that uses the ping role
+cat << EOF > playbooks/ping.yml
+---
+- name: Ping all machines
+  hosts: all
+  gather_facts: false
+  roles:
+    - ping
+EOF
 
 echo "Ansible repository structure created successfully!"
 ```

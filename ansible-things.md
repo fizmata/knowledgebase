@@ -20,8 +20,7 @@ touch group_vars/all.yml
 touch hosts
 mkdir -p roles/ping/tasks
 touch roles/ping/tasks/main.yml
-mkdir -p playbooks
-touch playbooks/ping.yml
+touch ping.yml
 
 # Create the Ansible configuration file
 cat << EOF > ansible.cfg
@@ -44,7 +43,7 @@ cat << EOF > roles/ping/tasks/main.yml
 EOF
 
 # Create a playbook that uses the ping role
-cat << EOF > playbooks/ping.yml
+cat << EOF > ping.yml
 ---
 - name: Ping all machines
   hosts: all

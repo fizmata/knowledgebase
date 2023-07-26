@@ -83,3 +83,14 @@ echo "Ansible repository structure created successfully!"
 
 I put the file in home directory of the user with permissions `0771` and add alias to it in .profile.
 This way I will have a simple command to initiate the ansible repo
+
+### Ansible.cfg
+You can generate a fully commented-out example ansible.cfg file, for example:
+```
+$ ansible-config init --disabled > ansible.cfg
+```
+You can also have a more complete file that includes existing plugins:
+```
+$ ansible-config init --disabled -t all > ansible.cfg
+```
+You can use these as starting points to create your own ansible.cfg file.

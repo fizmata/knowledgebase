@@ -12,3 +12,8 @@ If everything is correct set the input methods by:
 ```
 Set-WinUserLanguageList -LanguageList $NLL
 ```
+## Keyboard shortcuts
+`Win` + `Shift` + `s` - screenshot
+`Win` + `l` - lock screen
+`Win` + `k` - connections/bluetooth devices
+`Win` + `x` - fast access to system things

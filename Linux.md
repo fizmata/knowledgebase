@@ -12,3 +12,6 @@ systemctl --type=service | grep <service-name>
 ## Enviromnental Variables
 
 `/etc/environment` is the place to set variables for every user
+
+## To ship stuff
+self-extractable archives on Unix - https://makeself.io/

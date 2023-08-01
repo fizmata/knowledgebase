@@ -8,3 +8,7 @@ Folders should always get execution permission, otherwise they can not be opened
 ```
 systemctl --type=service | grep <service-name>
 ```
+
+## Enviromnental Variables
+
+`/etc/environment` is the place to set variables for every user

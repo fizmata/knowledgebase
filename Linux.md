@@ -18,5 +18,5 @@ self-extractable archives on Unix - https://makeself.io/
 
 to extract makeself archive without running it:
 ```
-<archive.sh> --noexec --target /tmp/demesto
+<archive.sh> --noexec --target /tmp/destination
 ```

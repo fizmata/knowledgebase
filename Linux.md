@@ -4,10 +4,18 @@ Folders should always get execution permission, otherwise they can not be opened
 
 ## SYSTEMD
 
+
+
 ### Search for Service
 ```
 systemctl --type=service | grep <service-name>
 ```
+
+### Under what user service runs
+```
+systemctl show -pUser,UID nginx
+```
+If User shows nothing, and UID is [not set], the service is running as root, or the owning user in the case of a user service.
 
 ## Enviromnental Variables
 

@@ -28,3 +28,10 @@ to extract makeself archive without running it:
 ```
 <archive.sh> --noexec --target /tmp/destination
 ```
+
+## apt
+
+to list all available version of the package:
+```
+apt-cache show
+```

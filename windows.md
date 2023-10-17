@@ -17,3 +17,6 @@ Set-WinUserLanguageList -LanguageList $NLL
 * `Win` + `l` - lock screen
 * `Win` + `k` - connections/bluetooth devices
 * `Win` + `x` - fast access to system things
+
+## Edge tabs as windows problem
+https://www.majorgeeks.com/content/page/alt_tab_edge.html

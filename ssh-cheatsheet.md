@@ -12,13 +12,13 @@ The -f switch instructs ssh to run in the background.
 ```
 $ ssh -f -N admin@server1.example.com -L 8080:server1.example.com:3000
 ```
-
+---------------------------------
 ### To get key to remote machine 
 ```
 ssh-copy-id
 ```
 
-
+------------------------------------
 ### when ssh hangs
 try to exit the SSH session by typing `~.`
 

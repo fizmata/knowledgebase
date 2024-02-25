@@ -94,3 +94,8 @@ You can also have a more complete file that includes existing plugins:
 $ ansible-config init --disabled -t all > ansible.cfg
 ```
 You can use these as starting points to create your own ansible.cfg file.
+
+### hosts file entry example
+```
+vm-1 ansible_host=193.40.156.86 ansible_port=4922 ansible_ssh_user=ubuntu ansible_python_interpreter=python3
+```

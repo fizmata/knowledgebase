@@ -19,6 +19,7 @@ If User shows nothing, and UID is [not set], the service is running as root, or 
 
 ## Enviromnental Variables
 
+
 `/etc/environment` is the place to set variables for every user
 
 ## To ship stuff
@@ -35,3 +36,22 @@ to list all available version of the package:
 ```
 apt-cache show
 ```
+
+## Linux Networking
+
+### Network manage TUI
+
+`nmtui` is a text based user interface, usefull for changeing IPs, Netmasks, etc.
+
+### Firewalld
+
+To open a port:
+```
+firewall-cmd --permanent --zone=public --add-port=80/tcp
+```
+and then to apply:
+```
+firewall-cmd --reload
+```
+
+In case you need none permament opening just remove `--permanent` flag from the first command. That way rules will reset after reboot.

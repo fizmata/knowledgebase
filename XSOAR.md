@@ -10,8 +10,8 @@ To access the docker/podman containers of the XSOAR change default shell of demi
 
 Here is the formatted text in Markdown:
 
-```
-## Flags that follow the -- separator
+
+#### Flags that follow the -- separator
 
 | Flag | Type | Description |
 | --- | --- | --- |
@@ -45,7 +45,7 @@ Here is the formatted text in Markdown:
 | -use-prev-uninstall-script | N/A | (For Cortex XSOAR upgrades) The script that deletes the Cortex XSOAR user and group is not run. |
 | -y | N/A | Answer all installer questions with y/yes, including the Cortex XSOAR EULA. |
 
-## Flags that precede and include the -- separator
+#### Flags that precede and include the -- separator
 
 Use the following flags to get help or information about the ./demistoserver-6.X-XXXXX.sh file.
 

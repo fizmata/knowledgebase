@@ -14,36 +14,62 @@ Here is the formatted text in Markdown:
 #### Flags that follow the -- separator
 
 | Flag | Type | Description |
-| --- | --- | --- |
-| -C | N/A | (CentOS) Tells yum to run entirely from system cache, and does not download or update any headers unless it has to perform the requested action. |
-| -backup | Boolean | Whether to back up server data when upgrading the Cortex XSOAR server. Default is true. |
-| -backup-tenants | Boolean | Whether to back up server data for tenants when upgrading the Cortex XSOAR server. Default is true. |
-| -conffile | String | The server .conf file. The default location is /etc/demisto.conf. |
-| -data-dir | String | Used to provide a custom installation path, different from the default /var/lib/demisto directory. Example: sudo ./demisto.sh -- -data-dir /xsoar. |
-| -demisto-no-gpg-check | N/A | Tells yum to disable the GPG signature when checking for the Cortex XSOAR RPM. |
-| -distro | String | Forces the Linux distro (such as CentOS, Debian, or Debian New). |
-| -do-not-start-server | N/A | Prevents starting the server when the installation or upgrade is complete. |
-| -dr | N/A | Sets up the disaster recovery server. |
-| -elasticsearch-url | String | Elasticsearch URL addresses (comma-separated). For example, http://test1:9200,http://test2:9200 |
-| -elasticsearch-api-key | String | The Elasticsearch API key, which should be used in licensed versions. |
-| -elasticsearch-username | String | The Elasticsearch username. |
-| -elasticsearch-password | String | The Elasticsearch password. |
-| -elasticsearch-proxy | Boolean | Whether to use a proxy when communicating with Elasticsearch. Can be true or false. Default is false. |
-| -elasticsearch-insecure | Boolean | Whether to trust any certificate when communicating with Elasticsearch. Can be true or false. Default is false. |
-| -elasticsearch-timeout | Integer | The amount of time (in seconds) before Elasticsearch times out. Default is 20 seconds. |
-| -elasticsearch-prefix | String | Defines the unique prefix a Cortex XSOAR server uses when naming the Elasticsearch indices it creates. |
-| -external-address | String | The external address of the instance during installation. |
-| -h | N/A | Displays installation help. |
-| -index-entries | Boolean | Whether to index entries. |
-| -otc | String | The one-time configuration file. The default location is /var/lib/demisto/otc.conf.json. |
-| -prev-uninstall-script | String | The path for the uninstall script. The default location is /var/lib/dpkg/info/demistoserver.postrm. |
-| -purge | N/A | Removes the existing Cortex XSOAR installation. |
-| -restore-entries | Boolean | Restores the entries index. If false, it prevents restoring the entries index. The default is true. |
-| -system-user-name= | String | When installing the Server you can now select the default Cortex XSOAR user name. |
-| -temp-folder | String | Replaces the temp folder (located in /var/lib/demisto/temp) with temp-folder at installation. Useful when you cannot access the temp folder due to permission or storage issues. |
-| -tools | Boolean | Installs the required tools. The default is true. |
-| -use-prev-uninstall-script | N/A | (For Cortex XSOAR upgrades) The script that deletes the Cortex XSOAR user and group is not run. |
-| -y | N/A | Answer all installer questions with y/yes, including the Cortex XSOAR EULA. |
+Here is the formatted text in Markdown:
+
+
+| Flag | Description |
+| --- | --- |
+| -C | (For CentOS) Tells yum to run entirely from system cache - does not download or update any headers unless it has to to perform the requested action. |
+| -add-system-user | Add the os user running the server (default true) |
+| -backup | Backup server data on upgrade (default true) |
+| -backup-tenants | For backup on upgrade on multi-tenant - also backup tenants data (default true) |
+| -cluster-address string | App server address to be used for in cluster communication |
+| -conffile string | Server conf file (default "/etc/demisto.conf") |
+| -container-engine string | Force the type of container engine to use (docker or podman) |
+| -data-dir string | Data directory path (default "/var/lib/demisto") |
+| -db-address string | Remote database address, you can enter the hostname or IP |
+| -db-any-certificate | Trust any certificate when communicating with database (default true) |
+| -db-conn-port string | Remote database secure connection port (default: 50001) |
+| -db-node | DB Node installer - for internal use only |
+| -db-only | Setup Demisto database server only (when using remote database) (defualt: false) |
+| -db-port string | Remote database port (default: 443) |
+| -db-secret string | Remote database secret |
+| -db-use-proxy | Use proxy when communicating with database |
+| -demisto-no-gpg-check | Tells yum to disable gpg signature checking for demisto rpm |
+| -distro string | Force linux distro. (such as centos, debian, debianNew...) |
+| -do-not-start-server | Do not start the server at the end of the installation/upgrade |
+| -dr | Setup DR server |
+| -elasticsearch-api-key string | ElasticSearch API key. if set, overrides username and password |
+| -elasticsearch-insecure | Trust any certificate when communicating with ElasticSearch |
+| -elasticsearch-master-prefix string | Master elastic prefix - for internal use only |
+| -elasticsearch-password string | ElasticSearch password to establish connection |
+| -elasticsearch-prefix string | ElasticSearch index names prefix |
+| -elasticsearch-proxy | Use proxy when communicating with ElasticSearch |
+| -elasticsearch-timeout int | ElasticSearch default timeout (default 90) |
+| -elasticsearch-url string | ElasticSearch host address in format https://localhost:9200. if empty will not establish connection to ElasticSearch |
+| -elasticsearch-username string | ElasticSearch username to establish connection |
+| -external-address string | External address - to set the external address of the instance during installation |
+| -git | Install required git (default true) |
+| -h | Show help |
+| -ha | Install high-availability app server |
+| -host | Host installer - for internal use only |
+| -hosted | Set to true for hosted environments |
+| -hosting-secret string | Set the secret for hosted environments |
+| -index-entries | Set to false to not index entries |
+| -multi-tenant | Setup multi-tenant server |
+| -otc string | One time conf file (default "/var/lib/demisto/otc.conf.json") |
+| -overwrite-elastic-config | Overwrite Elasticsearch configuration during upgrade |
+| -prev-uninstall-script string | Path to post uninstall script (default: /var/lib/dpkg/info/demistoserver.postrm ) (default "/var/lib/dpkg/info/demistoserver.postrm") |
+| -purge | Remove existing installation |
+| -purge-mount | Remove existing mounted installation, must come with purge |
+| -restore-entries | Set to false to not restore entries index (default true) |
+| -server-only | Setup Demisto server only (when using remote database) |
+| -system-group-name string | The os group name running the server (default "demisto") |
+| -system-user-name string | The os user name running the server (default "demisto") |
+| -temp-folder string | Temp folder for that the product will use - should be local and not shared |
+| -tools | Install required tools (default true) |
+| -use-prev-uninstall-script | Would not run the script which deletes Demisto user and group (on upgrade) |
+| -y | Answer all questions with y/yes, unless there is an error (will accept Palo Alto Networks Cortex XSOAR EULA) |
 
 #### Flags that precede and include the -- separator
 
@@ -72,4 +98,4 @@ Use the following flags to run the ./demistoserver-6.X-XXXXX.sh file.
 | --nodiskspace | Disk space is not checked for available space. |
 | --target dir | Extracts directly to an absolute or relative target directory. |
 | --tar arg1[arg2...] | Accesses the archive contents. |
-```
+

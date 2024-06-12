@@ -11,11 +11,7 @@ To access the docker/podman containers of the XSOAR change default shell of demi
 Here is the formatted text in Markdown:
 
 
-#### Flags that follow the -- separator
-
-| Flag | Type | Description |
-Here is the formatted text in Markdown:
-
+#### Flags that follow the `--` separator
 
 | Flag | Description |
 | --- | --- |

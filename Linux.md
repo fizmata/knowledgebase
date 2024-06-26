@@ -53,5 +53,16 @@ and then to apply:
 ```
 firewall-cmd --reload
 ```
+show applied rules
+```
+firewall-cmd --list-all-zones
+```
 
 In case you need none permament opening just remove `--permanent` flag from the first command. That way rules will reset after reboot.
+
+## Processes 
+
+for tree view of all processes use `--forest` flag
+```
+ps -auxf
+```

@@ -7,6 +7,7 @@ https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.6/Cortex-XSOAR-Adminis
 To access the docker/podman containers of the XSOAR change default shell of demisto user from /bin/false
 
 ### Installer flags 
+version 6.12
 
 Here is the formatted text in Markdown:
 

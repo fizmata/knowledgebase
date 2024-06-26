@@ -1,6 +1,35 @@
-### File Permissions 
+## File Permissions 
 
 Folders should always get execution permission, otherwise they can not be opened. If files inside get `0640` folder should be `0750`.
+
+## grep
+
+one does not need to `cat` to grep:
+```
+grep [expression] [file]
+```
+
+you can grep whole dirs too usring `-r` flag.
+
+igrone case:
+```
+grep -i
+```
+
+use multiple expressions
+```
+grep -e [exp1] -e [exp2]
+```
+
+count mathes:
+```
+grep -c
+```
+
+to follow stuff like `tail -f` follow it with a pipe line and:
+```
+grep --line-buffered [exp]
+```
 
 ## SYSTEMD
 

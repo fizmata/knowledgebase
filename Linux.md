@@ -95,3 +95,8 @@ for tree view of all processes use `--forest` flag
 ```
 ps -auxf
 ```
+
+## Change users default shell
+```
+sudo chsh --shell /bin/sh tecmint
+```

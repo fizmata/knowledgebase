@@ -100,3 +100,8 @@ ps -auxf
 ```
 sudo chsh --shell /bin/sh tecmint
 ```
+
+## Date and Time controls
+```
+timedatectl
+```

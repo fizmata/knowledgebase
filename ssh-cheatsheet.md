@@ -36,3 +36,5 @@ Supported escape sequences:
 (Note that escapes are only recognized immediately after newline.)
 ```
 
+
+https://linuxize.com/post/using-the-ssh-config-file/

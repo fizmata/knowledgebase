@@ -23,6 +23,8 @@ part of config
 
 `xsoar-dev` is a machine hostname engine expects. I have had no success putting IP in the hostname's place, instead modify `/etc/hosts` to whatever IP is required. 
 
+* note: engine could also connect to the host machine if the tennant account resides on host - tested on version 6.12 *
+
 ### Installer flags 
 version 6.12
 

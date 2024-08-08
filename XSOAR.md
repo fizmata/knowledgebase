@@ -12,17 +12,13 @@ engine config can be found at `/usr/local/demisto/<engine-name>/d1.conf`
 
 part of config
 ```
-{
-        "AgentURLs": null,
-        "ArtifactsFolder": "",
-        "BindAddress": ":0",
-        "EngineID": "46317e6c-a478-4da4-861e-87014ae1b7db",
         "EngineURLs": [
                 "wss://xsoar-dev:44333/acc_integration-development/d1ws"
         ],
         "InstallLogFile": "/tmp/d1_demolab-developer/demisto_install.log",
         "LogFile": "/var/log/demisto/d1_demolab-developer/d1.log",
         "LogLevel": "info",
+        "Server.ExternalHostName": "xsoar-dev:44333/acc_integration-development",
 ```
 
 `xsoar-dev` is a machine hostname engine expects. I have had no success putting IP in the hostname's place, instead modify `/etc/hosts` to whatever IP is required. 

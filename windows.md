@@ -33,7 +33,7 @@ To convert a private Mac/Linux (OpenSSH-style) key to a Windows (PPK-style) key:
 
 
 To convert a private Windows (PPK-style) key to a Mac/Linux (OpenSSH-style) key:
-2. Download PuTTYgen
+1. Download PuTTYgen
 2. Launch PuTTYgen. Visit File > Load private key.
 2. Browse to and open the PPK-style private key (id_rsa.ppk)
 2. Visit Conversion > Export OpenSSH key

@@ -25,6 +25,27 @@ part of config
 
 *note: engine could also connect to the host machine if the tennant account resides on host - tested on version 6.12*
 
+#### Shared engines
+
+[source of the method](https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/8/Cortex-XSOAR-Migration-Guide-From-V6-to-V8/Engines)
+
+Engines can be shared between tenant accounts using propagation labels. In settings select engine or load balancing group, click `Load-Balancing and Propagation`, add propagatio lablel. Now the engine can be synced to tenants.
+
+If the hostname of the xsoar needs to be changed in the engine config append the following to the engine config:
+
+```
+"additionalurls": {
+    "acc_<tenant-name>": {
+      "engineHeaderKey": "",
+      "serverPublicKey": "<the-key>",
+      "urls": [
+        "wss://<xsoar-main-hostname/ip>:<port-optional>/acc_<tenant-name>/d1ws"
+        "wss://<xsoar-host-hostname/ip>:<port-optional>/acc_<tenant-name>/d1ws"
+      ]
+    }
+  },
+```
+
 ### Installer flags 
 version 6.12
 

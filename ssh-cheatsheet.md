@@ -1,4 +1,33 @@
-### Port forwarding
+### SSH config file usefull parameters
+```
+# Don't bother me with informational messages and banners
+LogLevel Error
+# Human-readable ~/.ssh/known_hosts file
+HashKnownHosts no
+# Send keepalives so connections don't timeout and drop
+ServerAliveInterval 60
+# Never use ipv6, only ipv4
+AddressFamily inet
+# Don't wait too long when trying to connect to an unresponsive host
+ConnectTimeout 5
+```
+
+### Agent Forwarding
+
+You can forward local ssh agent to remote server, useful for development. ex: you can git clone using key without putting the private key on the development VM. For this you need to allow agent forwarding on server:
+
+in sshd conf:
+```
+AllowAgentForwarding yes
+```
+
+when loggin in the server either use `-A` flag or in ssh config:
+```
+Host *
+    ForwardAgent yes
+```
+
+### Port Forwarding
 You can forward a local port (e.g 8080) which you can then use to access the application locally as follows. The -L flag defines the port forwarded to the remote host and remote port.
 
 ```

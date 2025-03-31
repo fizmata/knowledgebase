@@ -15,7 +15,7 @@ Set-WinUserLanguageList -LanguageList $NLL
 ## Keyboard shortcuts
 * `Win` + `Shift` + `s` - screenshot
 * `Win` + `l` - lock screen
-* `Win` + `k` - connections/bluetooth devices
+* `Win` + `k` - connections/bluetooth devices - no longer works in Win 11 😔
 * `Win` + `x` - fast access to system things
 
 ## Edge tabs as windows problem

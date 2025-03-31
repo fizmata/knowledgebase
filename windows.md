@@ -13,10 +13,11 @@ If everything is correct set the input methods by:
 Set-WinUserLanguageList -LanguageList $NLL
 ```
 ## Keyboard shortcuts
-* `Win` + `Shift` + `s` - screenshot
+* `Win` + `Shift` + `s` - screenshot - not as useful in win 11 since print screen finally works as it should
 * `Win` + `l` - lock screen
 * `Win` + `k` - connections/bluetooth devices - no longer works in Win 11 😔
 * `Win` + `x` - fast access to system things
+* `win` + `p` - projector/screen mode
 
 ## Edge tabs as windows problem
 https://www.majorgeeks.com/content/page/alt_tab_edge.html

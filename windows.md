@@ -18,9 +18,17 @@ Set-WinUserLanguageList -LanguageList $NLL
 * `Win` + `k` - connections/bluetooth devices - no longer works in Win 11 😔
 * `Win` + `x` - fast access to system things
 * `win` + `p` - projector/screen mode
+* `Win` + `ctrl` + `o` - toggle on screeen keyboard
+* `Win` + `u` - Accessibility settings
 
 ## Edge tabs as windows problem
 https://www.majorgeeks.com/content/page/alt_tab_edge.html
+
+## Modify users env variables without admin access:
+
+1. Open control panel
+2. Using search find `edit environment variables for your account`
+3. Edit and save 
 
 ## Convertinf linux ssh key to Putty for windows and vice versa
 

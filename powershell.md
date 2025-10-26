@@ -32,3 +32,17 @@ if ($Force)
 }
 Do-Stuff @Splat
 ```
+#### Example 3
+```
+$a = @{
+    Message         = 'Hello', 'World!'
+}
+$b = @{
+    Separator       = '|'
+}
+$c = @{
+    BackgroundColor = 'Cyan'
+    ForegroundColor = 'Black'
+}
+Write-Host @a @b @c
+```

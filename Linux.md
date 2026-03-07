@@ -100,7 +100,11 @@ ps -auxf
 ```
 sudo chsh --shell /bin/sh tecmint
 ```
-
+As a sidenote, I added this one as some services install with user set their shell to `/usr/sbin/nologin`, if this is a secuirty requrement or for any other reason you would like to keep the `nologin`: 
+```
+su --shell=/bin/bash user
+```
+Short flag is `-s` and this approach can be used with ansible too with `become_method:`
 ## Date and Time controls
 ```
 timedatectl
